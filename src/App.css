@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&family=Lora&family=Tapestry&display=swap');
+
+
+
+
+.App{
+  min-height: 100vh;
+  background-color: #e9e9e9;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+input , textarea , button{
+  background-color: #ffffff;
+  border:none;
+  outline:none;
+  padding: 10px;
+  border-radius: 10px;
+}
+button{
+  cursor: pointer;
+}
+button:hover{
+  transform: scale(1.1);
+  transition: all ease-in-out 0.2s;
+}
+textarea{
+  width: 60%;
+}
+i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:50%;
+  padding: 1vw;
+  color:var(--black);
+}
+i:hover{
+  background-color: rgba(0, 0, 0, 0.17);
+}
+:root{
+  --green:#007F00;
+  --blue:#1877F2;
+  --yellow : #FFC72C;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+.MuiSvgIcon-root{
+  cursor: pointer;
+}
+.navbar{
+  transition: all ease-in-out 1s;
+  padding: 5px 50px 5px;
+  position: sticky;
+  top:0;
+  background-color: var(--yellow);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.navbar img{
+  width: 10%;
+}
+.add_notes{
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 10px;
+  flex-direction: column;
+}
+.add_notes button{
+  background-color: var(--blue);
+  color:white;
+  font-weight: 900;
+  padding: 1vw 2vw;
+}
+.form_buttons{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.card-list{
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card{
+  padding: 5px;
+  border-radius: 10px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 40%;
+  transition: all ease-in-out 1s;
+  color : var(--black)
+
+}
+.time{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: small;
+  font-weight: 900;
+  /* color : var(--black) */
+
+}
+.head{
+  font-family: 'Tapestry', cursive;
+  font-size: 30px !important;
+}
+.desc{
+  font-family: 'Lora', serif;
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  border: 2px solid;
+  padding: 10px;
+  border:none;
+  outline: none;
+  box-shadow: 24;
+  color : var(--black)
+
+}
+.icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-modal form{
+  border-radius: 10px;
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding:1vw 2vw;
+}
+.edit-modal input , .edit-modal textarea{
+  width:90%;
+}
+
+.del:hover{
+  color:red;
+}
+.edit:hover{
+  color:var(--blue)
+}
+.mode{
+  animation: round_ani 0.1s;
+  animation-iteration-count: 5;
+  transition: all ease-in-out;
+}
+.mode2{
+  animation: round_ani2 0.1s;
+  animation-iteration-count: 5;
+  transition: all ease-in-out;
+}
+
+
+@keyframes round_ani{
+  0%{
+    transition: all ease-in-out;
+    transform: rotate(180deg);
+  }
+  100%{
+    transition: all ease-in-out;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes round_ani2{
+  0%{
+    transition: all ease-in-out;
+    transform: rotate(-180deg);
+  }
+  100%{
+    transition: all ease-in-out;
+    transform: rotate(-360deg);
+  }
+}
+
+.dark{
+  background-color: rgb(52, 53, 54);
+  /* color: var(--white); */
+  transition: all ease-in-out 1s;
+}
+.ERR{
+  color: rgb(228, 44, 44);
+  font-family: 'Courier New', Courier, monospace;
+}
+.welcome{
+  color :  goldenrod;
+  font-variant: small-caps;
+  font-size: 7vw;
+  animation: myani 1.5s;
+  text-align: center;
+}
+@keyframes myani{
+  0%{
+   width : 1%;
+  }
+  10%{
+    width : 20%;
+  }
+  50%{
+    width : 50%;
+  }
+  60%{
+    width : 60%;
+  }
+  100%{
+    width : 100%;
+  }
+}
+
+.cnfm-box{
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  background-color: var(--white);
+  color: var(--black);
+}
+.cnf-btn{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.del-btn{
+  color:white;
+  background-color: rgb(199, 29, 29);
+}
+  
